@@ -3,7 +3,7 @@ import pandas as pd
 
 
 
-
+# 获取个股以往交易历史的分笔数据明细
 # df_tick = ts.get_tick_data('002372', date='2020-01-23', src='tt')
 
 # df_tick.index = pd.to_datetime(df_tick.time)
