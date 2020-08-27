@@ -14,16 +14,16 @@ df_stockload['Ma30'] = df_stockload.Close.rolling(window=30).mean()
 df_stockload['Ma60'] = df_stockload.Close.rolling(window=60).mean()  
 
 # python3.7打印
-print(df_stockload.tail())  # 查看前几行
-print(df_stockload.columns)  # 查看列名
-print(df_stockload.index)  # 查看索引
-print(df_stockload.describe())  # 查看各列数据描述性统计
+# print(df_stockload.tail())  # 查看前几行
+# print(df_stockload.columns)  # 查看列名
+# print(df_stockload.index)  # 查看索引
+# print(df_stockload.describe())  # 查看各列数据描述性统计
 
 kline = Kline("行情显示图",title_pos="40%")
 ohlc = list(zip(df_stockload.Open,df_stockload.Close,df_stockload.Low,df_stockload.High))
 dates = df_stockload.index.strftime('%Y-%m-%d')
-print(type(dates))
-print(type(df_stockload.index))
+# print(type(dates))
+# print(type(df_stockload.index))
 
 #is_datazoom_show=True 图表数据缩放  指定 markLine 位于开盘或者收盘上
 kline.add("日K", dates, ohlc, is_datazoom_show=True,is_xaxis_show=False, \
